@@ -40,9 +40,9 @@ const HomePage = () => {
       handleSearch={handleSearch}
       />
 
-      {loading && <p>Loading...</p>}
+      {loading && <p className=' flex flex-col mb-12 items-center font-bold justify-center'>Loading...</p>}
 
-      <div className='grid grid-cols-3 gap-4'>
+      <div className='grid grid-cols-4 gap-x-4 gap-y-16'>
 
         {recipes.map((recipe, index) => (
 
