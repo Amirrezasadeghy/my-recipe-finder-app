@@ -1,9 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js,jsx,tsx}"],
+  content: [
+    // "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    // "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    // "./components/**/*.{js,ts,jsx,tsx,mdx}",
+
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        'inner-custom': 'inset 0 2px 7px rgb(30, 30, 79);'
+    },
+  },
+  variants: {
+    extend: {
+      placeholder: ['responsive', 'focus'],
+    },
   },
   plugins: [],
 }
-
+};
