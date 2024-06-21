@@ -18,7 +18,7 @@ const HomePage = () => {
 
   const handleSearch = async () => {
     if (searchQuery.trim() === '') {
-      setError('Please enter a search query');
+      setError('Please input a recipe name.');
       setRecipes([]);
       setTotalPages(1);
       return;
@@ -60,7 +60,7 @@ const HomePage = () => {
       />
 
       {loading && <p className='flex flex-col mb-12 items-center font-bold justify-center'>Loading...</p>}
-      {error && <p className='flex flex-col items-center font-bold justify-center text-blue-600'>{error}</p>}
+      {error && <p className='flex flex-col items-center font-bold justify-center text-red-600 bg-red-100 border border-red-400 rounded px-4 py-2 mb-12'>{error}</p>}
 
       <div className='grid grid-cols-4 gap-x-4 gap-y-16'>
         {recipes.map((recipe, index) => (
